@@ -31,19 +31,24 @@
           <span></span>
           <span></span>
           <!-- navigation for changing songs -->
-            <a><i class="fa-solid fa-angle-left"></i> </a>
-            <a><i class="fa-solid fa-angle-right right"></i></a>
+          <a><i class="fa-solid fa-angle-left"></i> </a>
+          <a><i class="fa-solid fa-angle-right right"></i></a>
         </div>
         <div class="search">
-            <a><i class="fa-solid fa-house"></i></a>
-            <search>
-                 <input type="text" placeholder="&#xF002;   What do you want to play?" style="font-family:Arial, FontAwesome">
-                <i class="fa-solid fa-bag-shopping"></i></search>
+          <a><i class="fa-solid fa-house"></i></a>
+          <search>
+            <input
+              type="text"
+              placeholder="&#xF002;   What do you want to play?"
+              style="font-family: Arial, FontAwesome"
+            />
+            <i class="fa-solid fa-bag-shopping"></i>
+          </search>
         </div>
         <div class="profile">
-            <a><i class="fa-regular fa-bell"></i></a>
-            <a><i class="fa-solid fa-people-line"></i></a>
-            <a><i class="fa-regular fa-circle-user"></i></a>
+          <a><i class="fa-regular fa-bell"></i></a>
+          <a><i class="fa-solid fa-people-line"></i></a>
+          <a><i class="fa-regular fa-circle-user"></i></a>
         </div>
       </header>
       <main>
@@ -52,9 +57,50 @@
         <aside>sidebar</aside>
       </main>
       <footer>
-        <div>p1</div>
-        <div>p2</div>
-        <div>p3</div>
+        <div class="selected-song">
+          <article>
+            <figure>
+              <img src="images/bhairavi.jpeg" alt="Selected Song" />
+              <!-- <figcaption>Selected Song</figcaption> -->
+            </figure>
+            <section>
+              <h4>Bhairavi</h4>
+              <p>Pritam Bhattacharjee,Arijit Singh</p>
+            </section>
+            <i class="fa-regular fa-circle-check"></i>
+          </article>
+        </div>
+        <div class="controls">
+          <section>
+            <span><i class="fa-solid fa-shuffle"></i></span>
+            <span><i class="fa-solid fa-backward-step"></i></span>
+            <span><i class="fa-solid fa-circle-play"></i></span>
+            <span><i class="fa-solid fa-forward-step"></i></span>
+            <span><i class="fa-solid fa-repeat"></i></span>
+          </section>
+          <div class="bar">
+            <p>1:07</p>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <p>10:10</p>
+          </div>
+        </div>
+        <div class="sound">
+          <section>
+            <span><i class="fa-solid fa-microphone"></i></span>
+            <span><i class="fa-solid fa-bars"></i></span>
+            <span><i class="fa-solid fa-bullhorn"></i></span>
+            <span><i class="fa-solid fa-bullhorn"></i></span>
+            <span class="progress-width">
+                <div class="progress-bar" style="width:10vw">
+                     <div class="progress"></div>
+                </div>
+            </span>
+            <span><i class="fa-solid fa-maximize"></i></span>
+            <span><i class="fa-solid fa-minimize"></i></span>
+          </section>
+        </div>
       </footer>
     </div>
   </body>
