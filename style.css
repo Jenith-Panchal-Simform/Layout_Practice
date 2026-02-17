@@ -195,3 +195,23 @@ footer {
     }
 
 }
+
+.library{
+    background-color: beige ;
+    margin-bottom: 0.5rem;
+    > section{
+            height:7%;
+              border:2px solid red;
+    }
+    article{
+        background-color: aqua;
+        height:78%;
+        overflow-y:auto ;
+        
+    }
+    article > section{
+        height:12%;
+        background-color:chocolate;
+        border: 1px solid white;
+    };
+}
