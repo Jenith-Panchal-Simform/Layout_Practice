@@ -185,33 +185,44 @@ footer {
   height: 100%;
   background-color: white;
 }
-.sound{
-    width:20vw;
-     section{
-        display: flex;
-        align-items: center;
-        gap:0.6rem;
-        font-size:1.2rem;
-    }
-
+.sound {
+  width: 20vw;
+  section {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.2rem;
+  }
 }
 
-.library{
-    background-color: beige ;
-    margin-bottom: 0.5rem;
-    > section{
-            height:7%;
-              border:2px solid red;
-    }
-    article{
-        background-color: aqua;
-        height:78%;
-        overflow-y:auto ;
-        
-    }
-    article > section{
-        height:12%;
-        background-color:chocolate;
-        border: 1px solid white;
-    };
+.library {
+  background-color: beige;
+  margin-bottom: 0.5rem;
+  > section {
+    height: 7%;
+    border: 2px solid red;
+  }
+  article {
+    background-color: aqua;
+    height: 78%;
+    overflow-y: auto;
+  }
+  article > section {
+    height: 12%;
+    background-color: chocolate;
+    border: 1px solid white;
+  }
+}
+.liked-songs {
+  background-color: coral;
+  overflow-y: auto;
+  >section{
+    height: 55%;
+    background-color: beige;
+  }
+  article  section{
+    height: ;
+    background-color: yellow;
+    border:1px solid black;
+  }
 }
