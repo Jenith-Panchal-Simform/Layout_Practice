@@ -1,46 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="author" content="jenith">
-        <meta name="description" content="This webpage is Layout Practice For Spotify">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Spotify</title>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="jenith" />
+    <meta
+      name="description"
+      content="This webpage is Layout Practice For Spotify"
+    />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!-- fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Spotify</title>
+  </head>
 
-    <body>
-
-        <!-- container -->
-        <div id="container">
-
-            <!-- header  -->
-            <header>
-                <div class="navigation">
-                    <!-- navigation for open/close -->
-                     <span>-</span>
-                     <span>x</span>
-                     <span>+</span>
-                    <!-- navigation for changing songs -->
-                     <a>Prev</a>
-                     <a>Close</a>
-
-                </div>
-                <div>part1</div>
-                <div>part1</div>
-            </header>
-            <main>
-                <div>p1</div>
-                <div>p2</div>
-                <aside>sidebar</aside>
-            </main>
-            <footer>
-                <div>p1</div>
-                <div>p2</div>
-                <div>p3</div>
-            </footer>
+  <body>
+    <!-- container -->
+    <div id="container">
+      <!-- header  -->
+      <header>
+        <div class="navigation">
+          <!-- navigation for open/close -->
+          <span></span>
+          <span></span>
+          <span></span>
+          <!-- navigation for changing songs -->
+            <a><i class="fa-solid fa-angle-left"></i> </a>
+            <a><i class="fa-solid fa-angle-right right"></i></a>
         </div>
-
-
-    </body>
+        <div class="search">
+            <a><i class="fa-solid fa-house"></i></a>
+            <search>
+                 <input type="text" placeholder="&#xF002;   What do you want to play?" style="font-family:Arial, FontAwesome">
+                <i class="fa-solid fa-bag-shopping"></i></search>
+        </div>
+        <div class="profile">
+            <a><i class="fa-regular fa-bell"></i></a>
+            <a><i class="fa-solid fa-people-line"></i></a>
+            <a><i class="fa-regular fa-circle-user"></i></a>
+        </div>
+      </header>
+      <main>
+        <div>p1</div>
+        <div>p2</div>
+        <aside>sidebar</aside>
+      </main>
+      <footer>
+        <div>p1</div>
+        <div>p2</div>
+        <div>p3</div>
+      </footer>
+    </div>
+  </body>
 </html>

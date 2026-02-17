@@ -1,26 +1,122 @@
 *{
     margin:0;
     padding: 0;
-
     border:2px solid red;
 }
+@font-face {
+    font-family: Spotify-fonts;
+    src: url(fonts/GothamMedium.ttf);
+}
+:root {
+  --search-bg-color: rgb(31,31,31) ;
+}
 body{
+    font-family: Spotify-fonts,sans-serif;
     background-color: aquamarine;
-    height: 100vh;
+    max-height: 100vh;
 }
 a{
     text-decoration: none;
 }
 #container{
     display: grid;
-    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-rows: 7vh 83vh 10vh;
 }
 header{
     display: flex;
-    background-color: bisque;
+    background-color: #191414;
     justify-content: space-between;
     align-items: center;
     padding:0 1rem;
+    color:white
+}
+.navigation {
+    display: flex;
+    align-items:center ;
+    gap:.3rem;
+    span{
+        display: inline-block;
+        border-radius: 50%;
+        height:.7rem;
+        width:0.7rem;
+    }
+    span:nth-child(1)
+    {
+      background-color: red;
+    }
+    span:nth-child(2)
+    {
+      background-color: yellow;
+    }
+    span:nth-child(3)
+    {
+      background-color: green;
+    }
+    a{
+        font-size: 1.6rem;
+        cursor: pointer;
+    } 
+    .fa-angle-right{
+      opacity:0.7;
+    }
+    .fa-angle-right:hover{
+        opacity:1.0;
+    }
+}
+.search{
+    display: flex;
+    gap:0.8rem;
+    
+    a{
+        display: inline-block;
+        border-radius: 50%;
+        height:1.8rem;
+        width:1.8rem;
+        background-color:var(--search-bg-color);
+        padding:0.6rem;
+    }
+    a i{
+        width: 100%;
+        height: 100%;
+        font-size: 1.8rem;
+    }
+    search{
+      display: flex;  
+      max-width:30vw;   
+      width: 30vw;;    
+      justify-content: space-between;
+      align-items: center;
+      border-top-left-radius:35px;
+      border-bottom-left-radius: 35px;
+      border-top-right-radius: 35px;
+      border-bottom-right-radius: 35px;
+      padding: 0 .8rem;
+      background-color: var(--search-bg-color);
+        input{
+           width:100%;
+           height: 100%;
+           background-color: transparent;
+           font-size: 1.2rem;
+           border: none;
+           color:white;    
+        }
+        input:focus{
+            outline: none;
+            border: none
+        }
+        i{
+            font-size: 1.5rem;
+        }
+
+    }
+}
+.profile{
+    display: flex;
+    gap:.8rem;
+    a i{
+        font-size:1.5rem;
+        cursor: pointer;
+    }
 }
 main{
     display: grid;
@@ -32,5 +128,4 @@ footer{
     justify-content: space-between;
     align-items: center;
     padding:0 1rem;
-
 }
