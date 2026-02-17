@@ -15,7 +15,7 @@
 }
 body {
   font-family: Spotify-fonts, sans-serif;
-  background-color: aquamarine;
+
   max-height: 100vh;
   color:white;
     overflow: hidden;
@@ -24,6 +24,7 @@ a {
   text-decoration: none;
 }
 #container {
+    width:100vw;
   display: grid;
   grid-template-rows: 8% 80% 10%;
 
@@ -121,9 +122,11 @@ header {
   }
 }
 main {
+    /* width:100%; */
   display: grid;
-  background-color: blueviolet;
-  grid-template-columns: 1fr 3fr 1fr;
+  background-color: var(--bg-color-main);
+  grid-template-columns: 20vw 60vw 20vw;
+ 
 }
 footer {
   display: flex;
@@ -303,39 +306,100 @@ aside{
   }
  
 }
+    
+.main-top-buttons{
+    color: white;
+    background-color: rgb(93,105,63);
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding: 0.5rem 0.7rem;
+}
 .main-top-recs{
+    /* border-radius: 15rem; */
+
+     background: linear-gradient(
+to bottom, /* Direction: top → bottom */
+var(--gradient-color) 0%, /* Start color at 0% */
+var(--bg-color-main) 100% /* End color at 100% */
+);;
     height:40%;
-    background-color: cornflowerblue;
+    padding:1rem 1rem;
+    /* background-color: cornflowerblue; */
     article{
+        margin-top:1rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        gap:0.5rem;
+        gap:1rem;
+    }
+    .card{
+        display: flex;
+        gap:2rem;
+        align-items: center;
+        background-color: rgb(93,105,63);
+        font-weight: 550;
+        border-radius: 5px;
+        figure{
+            height:5vh;
+            width: 3vw;
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
     }
     article > section{
-        background-color: beige;
+        /* background-color: beige; */
         grid-row:auto;
     }
 }
 .main-mid-recs{
      height:50%;
-    background-color: aqua;
+     /* overflow: hidden; */
+     /* width: 100%; */
+    /* background-color: aqua; */
     .made-for-me{
+        padding:1rem;
         display: flex;
         justify-content: space-between;
     }
     article{
+        /* width:100%; */
         display: flex;
-        overflow-x: auto;
-        width:100%;
+        overflow-y: auto;
+        padding: 0 1rem;
+        gap:0.7rem;
     }
+    
     article>section{
-        width:120%;
-        background-color: cadetblue;
-        border: 1px solid black;
+           
+        /* width:100%;   */
+        width:12rem;
     }
+     article>section>p{
+        font-weight: 200;
+        font-size: 0.8rem;
+        margin-top:0.8rem;
+     }
+    article>section>figure {
+        height:12rem;
+        width:12rem;
+
+    }
+    article>section>figure>img{
+        height: 100%;
+        width: 100%;
+        border-radius:0.5rem;
+    }
+
 }
 .main-today-hits{
-     background-color: burlywood;
+     /* background-color: burlywood; */
 
 }
