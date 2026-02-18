@@ -1,3 +1,5 @@
+
+/* root styles */
 * {
   margin: 0;
   padding: 0;
@@ -27,8 +29,11 @@ a {
     width:100vw;
   display: grid;
   grid-template-rows: 8% 80% 10%;
-
 }
+
+
+
+/* header styling,styleing navigation */
 header {
   display: flex;
   background-color: var(--bg-color);
@@ -37,6 +42,7 @@ header {
   padding: 0 1rem;
   color: white;
 }
+
 .navigation {
   display: flex;
   align-items: center;
@@ -121,13 +127,12 @@ header {
     cursor: pointer;
   }
 }
-main {
-    /* width:100%; */
-  display: grid;
-  background-color: var(--bg-color-main);
-  grid-template-columns: 20vw 60vw 20vw;
- 
-}
+
+
+
+
+
+/* footer styling,atyling all 3 sections */
 footer {
   display: flex;
   justify-content: space-between;
@@ -203,6 +208,15 @@ footer {
   }
 }
 
+
+/* main section styling,styling all 3 sections */
+main {
+    /* width:100%; */
+  display: grid;
+  background-color: var(--bg-color-main);
+  grid-template-columns: 20vw 60vw 20vw;
+}
+/* main-left-library styling */
 .library {
 grid-row:auto;
   background-color: var(--bg-color-main);
@@ -240,8 +254,9 @@ grid-row:auto;
      height:70%;
   }
   
-  
 }
+/* main-rigt-current song styling */
+
 aside{
     background-color: var(--bg-color-main);
      margin-bottom: 0.5rem;
@@ -306,7 +321,8 @@ aside{
   }
  
 }
-    
+  
+/* main mid styling */
 .main-top-buttons{
     color: white;
     background-color: rgb(93,105,63);
@@ -397,7 +413,6 @@ var(--bg-color-main) 100% /* End color at 100% */
         width: 100%;
         border-radius:0.5rem;
     }
-
 }
 .main-today-hits{
      /* background-color: burlywood; */
