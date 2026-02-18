@@ -147,6 +147,8 @@ footer {
     align-items: center;
     gap: 1rem;
     max-width: 18vw;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
     figure {
       height: 4rem;
       width: 4rem;
@@ -166,7 +168,12 @@ footer {
       font-weight: 350;
       font-size: 0.7rem;
       letter-spacing: 1px;
+      
     }
+  }
+  article:hover{
+    cursor: pointer;
+    background-color: var(--search-bg-color);
   }
 }
 .controls {
@@ -181,7 +188,9 @@ footer {
     gap: 1rem;
     font-size: 1.5rem;
   }
-
+section>span{
+  cursor: pointer;
+}
   .bar {
     display: flex;
     align-items: center;
@@ -199,12 +208,15 @@ footer {
   background-color: white;
 }
 .sound {
-  width: 20vw;
+  width: 21%;
   section {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-    font-size: 1.2rem;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+  }
+  section>span:hover{
+    cursor: pointer;
   }
 }
 
@@ -213,6 +225,7 @@ footer {
 main {
     /* width:100%; */
   display: grid;
+  column-gap:0.5rem;
   background-color: var(--bg-color-main);
   grid-template-columns: 20vw 60vw 20vw;
 }
@@ -332,7 +345,6 @@ aside{
   }
  
 }
-  
 /* main mid styling */
 .main-top-buttons{
     color: white;
@@ -348,7 +360,7 @@ aside{
 }
 .main-top-recs{
     /* border-radius: 15rem; */
-
+    /* overflow: hidden; */
      background: linear-gradient(
 to bottom, /* Direction: top → bottom */
 var(--gradient-color) 0%, /* Start color at 0% */
