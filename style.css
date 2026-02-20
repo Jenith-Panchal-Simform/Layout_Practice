@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border:2px solid red; */
 }
 @font-face {
   font-family: Spotify-fonts;
@@ -21,20 +20,17 @@ body {
   height: 100vh;
   width: 100vw;
   color:white;
-    /* overflow: hidden; */
 }
 a {
   text-decoration: none;
 }
 #container {
   height: 100vh;
-  /* display: grid; */
-  /* grid-template-rows: 10vh 1fr; */
 }
 
 /* header styling,styleing navigation */
 header {
-  height: 10%;
+  height: 70px;
     width:100%;
     overflow: hidden;
   display: flex;
@@ -46,7 +42,6 @@ header {
 }
 
 .navigation {
-  /* width: 100%; */
   display: flex;
   align-items: center;
   gap: 0.3rem;
@@ -144,13 +139,13 @@ footer {
   padding: 1rem 1rem;
   color: white;
   background-color: var(--bg-color);
+  max-width: 100%
 }
 .selected-song,.song-list {
   article {
     display: flex;
     align-items: center;
     gap: 1rem;
-    /* max-width: 25%; */
     padding-right: 1rem;
     border-radius: 0.5rem;
     figure {
@@ -180,7 +175,6 @@ footer {
 .controls {
   display: flex;
   flex-direction: column;
-  /* width: 30vw; */
   gap: 1.5rem;
   align-items: center;
   justify-content: center;
@@ -225,17 +219,14 @@ section>span{
 
 /* main section styling,styling all 3 sections */
 main {
-  height: 90%;
+  height: calc(100% - 70px);
   display: flex;
   overflow: hidden;
-
-  /* column-gap:0.5vw; */
   background-color: var(--bg-color-main);
-  /* grid-template-columns: 20% 59% 20%; */
 }
+
 /* main-left-library styling */
 .library {
-/* grid-row:auto; */
    height: 100% ;
   width: 20%;
   background-color: var(--bg-color-main);
@@ -300,9 +291,6 @@ aside{
  overflow-y:auto;
  scrollbar-width: none;
   .liked-songs{
-    /* background-color: aqua; */
-    /* overflow: hidden; */
-    /* height:55%; */
     display: flex;
     flex-direction: column;
   }
@@ -336,8 +324,6 @@ aside{
    margin:3rem 0;
    overflow-x: auto;
    scrollbar-width:none ;
-    /* background-color: aqua;   */
-    /* height:35%; */
   }
   .rec-songs{
     display: flex;
@@ -371,6 +357,7 @@ aside{
   width: 60%;
   overflow: auto;
   scrollbar-width: none;
+
   /* main mid styling */
 .main-top-buttons{
     color: white;
@@ -385,16 +372,14 @@ aside{
     padding: 0.5rem 0.7rem;
 }
 .main-top-recs{
-    /* border-radius: 15rem; */
     overflow: hidden;
      background: linear-gradient(
-to bottom, /* Direction: top → bottom */
-var(--gradient-color) 0%, /* Start color at 0% */
-var(--bg-color-main) 100% /* End color at 100% */
+to bottom, 
+var(--gradient-color) 0%, 
+var(--bg-color-main) 100% 
 );;
     height:40%;
     padding:1rem 1rem;
-    /* background-color: cornflowerblue; */
     article{
         margin-top:1rem;
         display: grid;
@@ -421,13 +406,10 @@ var(--bg-color-main) 100% /* End color at 100% */
         }
     }
     article > section{
-        /* background-color: beige; */
         grid-row:auto;
     }
 }
 .main-mid-recs{
-     /* height:50%; */
-     /* overflow: hidden; */
 
     .made-for-me{
         padding:1rem;
@@ -435,7 +417,6 @@ var(--bg-color-main) 100% /* End color at 100% */
         justify-content: space-between;
     }
     article{
-        /* width:100%; */
         display: flex;
         overflow-y: auto;
         scrollbar-width: none;
@@ -445,14 +426,9 @@ var(--bg-color-main) 100% /* End color at 100% */
       
       article>section{
       flex-shrink: 0;
-
-        /* width:100%;   */
-        /* width:25%; */
-        /* background-color: aqua; */
-        /* min-width:15rem; */
-        max-width:200px;
-        max-height: 300px;
-        padding: 0.5rem 0.5rem;
+      max-width:200px;
+      max-height: 300px;
+      padding: 0.5rem 0.5rem;
     }
      article>section:hover{
       background-color: var(--search-bg-color);
