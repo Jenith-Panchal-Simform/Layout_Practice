@@ -31,7 +31,8 @@ a {
 header {
   height: 70px;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
+  scrollbar-width: none;
   display: flex;
   background-color: var(--bg-color);
   justify-content: space-between;
@@ -89,8 +90,7 @@ header {
   }
   search {
     display: flex;
-    max-width: 30vw;
-    width: 30vw;
+    width: 30vw ;
     justify-content: space-between;
     align-items: center;
     border-top-left-radius: 35px;
@@ -132,13 +132,11 @@ footer {
   right: 0;
   left: 0;
   display: flex;
-  overflow: hidden;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1rem;
   color: white;
   background-color: var(--bg-color);
-  max-width: 100%;
 }
 .selected-song,
 .song-list {
@@ -204,7 +202,7 @@ footer {
   background-color: white;
 }
 .sound {
-  width: 21%;
+  
   section {
     display: flex;
     align-items: center;
@@ -237,13 +235,15 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 15%;
+    max-height: 15%;
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: none;
     > section {
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-weight: 350;
-      overflow: hidden;
     }
     > section > button,
     > section > div > button {
@@ -283,7 +283,7 @@ aside {
   margin-bottom: 0.5rem;
   padding: 0 1rem;
   border-radius: 5px;
-  overflow-y: auto;
+  overflow: auto;
   scrollbar-width: none;
   .liked-songs {
     display: flex;
@@ -296,8 +296,8 @@ aside {
     padding: 1rem 0;
   }
   .liked-song-figure {
-    max-height: 400px;
-    max-width: 300px;
+    height: 15rem;
+    width: 15rem;
     margin: auto;
   }
   .liked-song-figure img {
@@ -329,8 +329,8 @@ aside {
     cursor: pointer;
   }
   .rec-song-figure {
-    height: 50%;
-    width: 50%;
+    height: 10rem;
+  
     margin: auto;
   }
   .rec-song-figure img {
@@ -365,13 +365,13 @@ aside {
     padding: 0.5rem 0.7rem;
   }
   .main-top-recs {
-    overflow: hidden;
+    overflow: auto;
+    scrollbar-width: none;
     background: linear-gradient(
       to bottom,
       var(--gradient-color) 0%,
       var(--bg-color-main) 100%
     );
-    height: 40%;
     padding: 1rem 1rem;
     article {
       margin-top: 1rem;
@@ -388,9 +388,8 @@ aside {
       font-weight: 550;
       border-radius: 5px;
       figure {
-        height: 5vh;
-        width: 3vw;
-        overflow: hidden;
+        height: 4rem;
+        width: 4rem;
         img {
           height: 100%;
           width: 100%;
@@ -434,7 +433,7 @@ aside {
       margin-top: 0.8rem;
     }
     article > section > figure {
-      height: 20vh;
+      height:10rem;
       width: 100%;
     }
     article > section > figure > img {
