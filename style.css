@@ -1,0 +1,445 @@
+/* root styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Spotify-fonts;
+  src: url(fonts/GothamMedium.ttf);
+}
+:root {
+  --search-bg-color: rgb(31, 31, 31);
+  --bg-color: #191414;
+  --bg-color-main: rgb(18, 18, 18);
+  --gradient-color: #495528;
+}
+body {
+  font-family: Spotify-fonts, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+#container {
+  height: 100vh;
+}
+
+/* header styling,styling navigation */
+header {
+  height: 70px;
+  width: 100%;
+  overflow: auto;
+  scrollbar-width: none;
+  display: flex;
+  background-color: var(--bg-color);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  color: white;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  span {
+    display: inline-block;
+    border-radius: 50%;
+    height: 0.7rem;
+    width: 0.7rem;
+  }
+  .close {
+    background-color: red;
+  }
+  .minimize {
+    background-color: yellow;
+  }
+  .hide {
+    background-color: green;
+  }
+  a {
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+  .fa-angle-right {
+    opacity: 0.7;
+  }
+  .fa-angle-right:hover {
+    opacity: 1;
+  }
+}
+.search {
+  display: flex;
+  gap: 0.8rem;
+
+  a {
+    display: inline-block;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--search-bg-color);
+    padding: 0.6rem;
+  }
+  a i {
+    width: 100%;
+    height: 100%;
+    font-size: 1.8rem;
+  }
+  search {
+    display: flex;
+    width: 30vw ;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding: 0 0.8rem;
+    background-color: var(--search-bg-color);
+    input {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      font-size: 1.2rem;
+      border: none;
+      color: white;
+    }
+    input:focus {
+      outline: none;
+      border: none;
+    }
+    i {
+      font-size: 1.5rem;
+    }
+  }
+}
+.profile {
+  display: flex;
+  gap: 0.8rem;
+  a i {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+/* footer styling,styling all 3 sections */
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  color: white;
+  background-color: var(--bg-color);
+}
+.selected-song,
+.song-list {
+  article {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+    figure {
+      height: 50px;
+      width: 50px;
+    }
+    figure img {
+      height: 100%;
+      width: 100%;
+      border-radius: 5px;
+    }
+    section h4 {
+      font-weight: 200;
+    }
+    section p {
+      margin-top: 0.3rem;
+      font-weight: 350;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+    }
+  }
+  article:hover {
+    cursor: pointer;
+    background-color: var(--search-bg-color);
+  }
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  section {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+  section > span {
+    cursor: pointer;
+  }
+  .bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+}
+.progress-bar {
+  width: 90%;
+  height: 0.5rem;
+  background-color: var(--search-bg-color);
+}
+.progress {
+  width: 25%;
+  height: 100%;
+  background-color: white;
+}
+.sound {
+  
+  section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+  }
+  section > span:hover {
+    cursor: pointer;
+  }
+}
+
+/* main section styling,styling all 3 sections */
+main {
+  height: calc(100% - 70px);
+  display: flex;
+  overflow: hidden;
+  background-color: var(--bg-color-main);
+}
+
+/* main-left-library styling */
+.library {
+  height: 100%;
+  width: 20%;
+  background-color: var(--bg-color-main);
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+  border-radius: 5px;
+
+  .library-headings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 15%;
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: none;
+    > section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 350;
+    }
+    > section > button,
+    > section > div > button {
+      color: white;
+      background-color: var(--search-bg-color);
+      border: none;
+      font-size: 1rem;
+      font-weight: 500;
+      border-top-left-radius: 35px;
+      border-bottom-left-radius: 35px;
+      border-top-right-radius: 35px;
+      border-bottom-right-radius: 35px;
+      padding: 0.5rem 0.7rem;
+    }
+  }
+
+  .song-list {
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+    height: 85%;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  .song-list > article:hover {
+    background-color: var(--search-bg-color);
+    cursor: pointer;
+  }
+}
+/* main-rigt-current song styling */
+
+aside {
+  height: 100%;
+  width: 20%;
+  background-color: var(--bg-color-main);
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+  border-radius: 5px;
+  overflow: auto;
+  scrollbar-width: none;
+  .liked-songs {
+    display: flex;
+    flex-direction: column;
+  }
+  .liked-songs:hover {
+    cursor: pointer;
+  }
+  > section h4 {
+    padding: 1rem 0;
+  }
+  .liked-song-figure {
+    height: 15rem;
+    width: 15rem;
+    margin: auto;
+  }
+  .liked-song-figure img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+  }
+  > section h1 {
+    padding: 0.5rem 0;
+  }
+  .liked-song-details {
+    height: calc(55%-400px);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  article {
+    margin: 3rem 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .rec-songs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .rec-songs:hover {
+    cursor: pointer;
+  }
+  .rec-song-figure {
+    height: 10rem;
+  
+    margin: auto;
+  }
+  .rec-song-figure img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .rec-song-details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+    margin: 1rem 0;
+  }
+}
+.main-section {
+  width: 60%;
+  overflow: auto;
+  scrollbar-width: none;
+
+  /* main mid styling */
+  .main-top-buttons {
+    color: white;
+    background-color: rgb(93, 105, 63);
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding: 0.5rem 0.7rem;
+  }
+  .main-top-recs {
+    overflow: auto;
+    scrollbar-width: none;
+    background: linear-gradient(
+      to bottom,
+      var(--gradient-color) 0%,
+      var(--bg-color-main) 100%
+    );
+    padding: 1rem 1rem;
+    article {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: 1rem;
+    }
+    .card {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      background-color: rgb(93, 105, 63);
+      font-weight: 550;
+      border-radius: 5px;
+      figure {
+        height: 4rem;
+        width: 4rem;
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+    }
+    article > section {
+      grid-row: auto;
+    }
+  }
+  .main-mid-recs {
+    .made-for-me {
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    article {
+      display: flex;
+      overflow-y: auto;
+      scrollbar-width: none;
+      padding: 0 1%;
+      gap: 1%;
+    }
+
+    article > section {
+      flex-shrink: 0;
+      max-width: 200px;
+      max-height: 300px;
+      padding: 0.5rem 0.5rem;
+    }
+    article > section:hover {
+      background-color: var(--search-bg-color);
+      cursor: pointer;
+      border-radius: 0.5rem;
+    }
+
+    article > section > p {
+      font-weight: 200;
+      font-size: 0.8rem;
+      margin-top: 0.8rem;
+    }
+    article > section > figure {
+      height:10rem;
+      width: 100%;
+    }
+    article > section > figure > img {
+      height: 100%;
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+  }
+}
